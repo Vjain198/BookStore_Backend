@@ -1,5 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const dotenv = require("dotenv").config();
 
 const PORT = process.env.PORT || 5555;
 const mongoodbUrl = require("./config");
@@ -35,7 +36,6 @@ app.get("/", (req, res) => {
 app.use("/books", booksRoute);
 
 // connecting to database
-
 mongoose
   .connect(mongoodbUrl)
   .then(() => {

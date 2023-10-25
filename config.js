@@ -1,4 +1,2 @@
-const mongoodbUrl =
-  "mongodb+srv://root:root123@cluster0.i8kfcaw.mongodb.net/books-collection?retryWrites=true&w=majority";
-
+const mongoodbUrl = process.env.MONGO_URI;
 module.exports = mongoodbUrl;
